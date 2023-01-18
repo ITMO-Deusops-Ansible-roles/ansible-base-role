@@ -1,0 +1,10 @@
+---
+# tasks file for ansible-role-base
+- name: Install required system packages
+  become: yes
+  apt:
+    pkg:
+      - python3-pip
+      - python3-setuptools
+    state: latest
+    update_cache: true
